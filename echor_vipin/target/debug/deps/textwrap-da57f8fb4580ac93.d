@@ -1,0 +1,11 @@
+/home/vipink/Documents/Rust_projects/rust_cli_book_solutions/echor_vipin/target/debug/deps/textwrap-da57f8fb4580ac93.rmeta: /home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/lib.rs /home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/indentation.rs /home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/word_separators.rs /home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/word_splitters.rs /home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/wrap_algorithms.rs /home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/line_ending.rs /home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/core.rs
+
+/home/vipink/Documents/Rust_projects/rust_cli_book_solutions/echor_vipin/target/debug/deps/textwrap-da57f8fb4580ac93.d: /home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/lib.rs /home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/indentation.rs /home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/word_separators.rs /home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/word_splitters.rs /home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/wrap_algorithms.rs /home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/line_ending.rs /home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/core.rs
+
+/home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/lib.rs:
+/home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/indentation.rs:
+/home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/word_separators.rs:
+/home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/word_splitters.rs:
+/home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/wrap_algorithms.rs:
+/home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/line_ending.rs:
+/home/vipink/.cargo/registry/src/github.com-1ecc6299db9ec823/textwrap-0.16.0/src/core.rs:
