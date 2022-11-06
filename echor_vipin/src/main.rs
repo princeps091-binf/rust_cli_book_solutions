@@ -1,4 +1,4 @@
-use clap::{arg, Arg, command, ArgAction};
+use clap::{Arg, command, ArgAction};
 
 
 fn main() {
