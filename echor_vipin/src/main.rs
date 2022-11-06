@@ -1,17 +1,30 @@
-use clap::{arg, Command, command, ArgAction};
+use clap::{arg, Arg, command, ArgAction};
 
 
 fn main() {
-    let matches = Command::new("echor_vipin")
-    .version("0.0.1")
-    .author("Vipin Kumar <princeps091@gmail.com>")
-    .about("my implementation of echo in Rust")
-    .arg(arg!([input] "the string to print").required(true))
+    let matches = command!()
+    .arg(
+        Arg::new("input")
+                .short('i')
+                .long("input")
+                .action(ArgAction::Append),
+    )
+    .arg(
+        Arg::new("newline")
+            .short('n')
+            .long("newline")
+            .action(ArgAction::SetTrue)
+    )
     .get_matches();
 
+    let text = matches.get_one::<String>("input").unwrap();
+    let omit_newline = matches.get_one("newline").unwrap();
 
-    println!(
-        "your string was: {:?}",
-        matches.get_one::<String>("input").expect("required")
-    );
+    let mut ending = "";
+
+    if *omit_newline {
+        ending = "\n"; // This will not work
+        }
+
+    print!("{}{}", text, ending);
 }
