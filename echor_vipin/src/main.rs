@@ -6,7 +6,7 @@ fn main() {
 //                .short('i')
 //                .long("input")
                 .help("Input string from user")
-                .action(ArgAction::Set)
+                .action(ArgAction::Append)
                 .required(true),
     )
     .arg(
@@ -18,10 +18,14 @@ fn main() {
     )
     .get_matches();
 
-    let text = matches.get_one::<String>("input").unwrap();
+    let text: _  = matches.get_many::<String>("input")
+    .expect("input string required")
+    .map(|v| v.as_str())
+    .collect::<Vec<&str>>();
+
     let omit_newline = matches.get_one("newline").unwrap();
 
     let ending = if *omit_newline { "\n" } else { "" };
     
-    print!("{}{}", text, ending);
+    println!("{}{}", text.join(" "), ending);
 }
