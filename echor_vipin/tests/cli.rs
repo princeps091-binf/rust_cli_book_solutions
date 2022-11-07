@@ -11,5 +11,5 @@ cmd.assert()
 #[test]
 fn runs() {
 let mut cmd = Command::cargo_bin("echor_vipin").unwrap();
-cmd.arg("-i hello -n").assert().success();
+cmd.arg("hello -n").assert().success();
 }

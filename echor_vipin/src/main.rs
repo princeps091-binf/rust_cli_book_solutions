@@ -3,8 +3,8 @@ fn main() {
     let matches = command!()
     .arg(
         Arg::new("input")
-                .short('i')
-                .long("input")
+//                .short('i')
+//                .long("input")
                 .help("Input string from user")
                 .action(ArgAction::Set)
                 .required(true),
