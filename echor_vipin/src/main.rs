@@ -21,11 +21,11 @@ fn main() {
     let text: _  = matches.get_many::<String>("input")
     .expect("input string required")
     .map(|v| v.as_str())
-    .collect::<Vec<&str>>();
+    .collect::<Vec<&str>>().join(" ");
 
     let omit_newline = matches.get_one("newline").unwrap();
 
     let ending = if *omit_newline { "\n" } else { "" };
     
-    println!("{}{}", text.join(" "), ending);
+    print!("{}{}", text, ending);
 }
