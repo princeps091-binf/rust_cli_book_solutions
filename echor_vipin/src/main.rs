@@ -25,7 +25,7 @@ fn main() {
 
     let omit_newline = matches.get_one("newline").unwrap();
 
-    let ending = if *omit_newline { "\n" } else { "" };
+    let ending = if *omit_newline { "" } else { "\n" };
     
     print!("{}{}", text, ending);
 }
