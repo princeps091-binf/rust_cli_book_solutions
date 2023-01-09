@@ -18,6 +18,7 @@ pub fn get_args() -> MyResult<Config> {
             .long("files")
             .help("Files to concatenate")
             .action(ArgAction::Append)
+            .default_value("_")
         )
         .arg(
             Arg::new("number")
