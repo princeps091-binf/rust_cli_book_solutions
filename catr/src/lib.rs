@@ -26,6 +26,7 @@ pub fn get_args() -> MyResult<Config> {
                 .long("number")
                 .help("Number lines")
                 .action(ArgAction::SetTrue)
+                .conflicts_with("number_nonblank")
         )
         .arg(
             Arg::new("number_nonblank")
@@ -33,6 +34,7 @@ pub fn get_args() -> MyResult<Config> {
                 .long("number-nonblank")
                 .help("Number nonblank lines")
                 .action(ArgAction::SetTrue)
+                .conflicts_with("number")
         )
     .get_matches();
 
