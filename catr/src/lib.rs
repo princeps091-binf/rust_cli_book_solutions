@@ -1,5 +1,7 @@
 use std::error::Error;
 use clap::{Arg, command, ArgAction};
+use std::fs::File;
+use std::io::{self, BufRead, BufReader};
 
 #[derive(Debug)]
 pub struct Config {
@@ -14,8 +16,6 @@ pub fn get_args() -> MyResult<Config> {
     let matches = command!()
     .arg(
         Arg::new("files")
-            .short('f')
-            .long("files")
             .help("Files to concatenate")
             .action(ArgAction::Append)
             .num_args(0..)
@@ -49,11 +49,26 @@ pub fn get_args() -> MyResult<Config> {
         })
 }
 
+
+fn open(filename: &str) -> MyResult<Box<dyn BufRead>> {
+    match filename {
+    "_" => Ok(Box::new(BufReader::new(io::stdin()))),
+    _ => Ok(Box::new(BufReader::new(File::open(filename)?))),
+    }
+    }
+
 type MyResult<T> = Result<T, Box<dyn Error>>;
 
 pub fn run(config: Config) -> MyResult<()>{
     for filename in config.files {
-        println!("{}",filename);
+        match open(&filename){
+            Err(err) => eprintln!("Failed to open {}: {}",filename,err),
+            Ok(file) => {
+                for file_line in file.lines(){
+                    println!("{:?}",file_line?)
+                }
+            },
+        }
     }
     Ok(())
 }
